@@ -47,8 +47,9 @@ body {
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 5px;
-} @media (max-width: 768px) {
+}
 
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         text-align: center;
