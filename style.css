@@ -67,6 +67,11 @@ body{
     align-items:center;
     gap:15px;
 }
+.logo{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
 
 .brand-mark{
     background:#0B8F5A;
