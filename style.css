@@ -397,3 +397,158 @@ body{
     border:none;
     border-radius:15px;
 }
+
+/* ===========================
+   Footer
+=========================== */
+
+.footer{
+    background:#0B8F5A;
+    color:#fff;
+    padding:60px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.footer h3,
+.footer h4{
+    margin-bottom:15px;
+}
+
+.footer p{
+    margin-bottom:10px;
+}
+
+.footer a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    text-decoration:underline;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.2);
+    margin-top:30px;
+    padding-top:20px;
+}
+
+/* ===========================
+   Floating WhatsApp Button
+=========================== */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.3s;
+    z-index:1000;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+/* ===========================
+   Scroll to Top Button
+=========================== */
+
+.scroll-top{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#FFD54F;
+    color:#222;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width:900px){
+
+    .nav-wrap{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-mini-cards{
+        grid-template-columns:1fr;
+    }
+
+    .topbar-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media (max-width:600px){
+
+    .hero{
+        padding:70px 0;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .section-heading h2{
+        font-size:30px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box input,
+    .search-box button{
+        width:100%;
+    }
+}
