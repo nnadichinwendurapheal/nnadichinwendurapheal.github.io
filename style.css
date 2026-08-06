@@ -268,3 +268,132 @@ body{
     color:#0B8F5A;
     font-size:22px;
 }
+/* ===========================
+   Sections
+=========================== */
+
+.section{
+    padding:90px 0;
+}
+
+.section-light{
+    background:#ffffff;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 60px;
+}
+
+.section-heading span{
+    color:#0B8F5A;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.section-heading h2{
+    font-size:42px;
+    margin:15px 0;
+    color:#1f2937;
+}
+
+.section-heading p{
+    color:#666;
+    font-size:17px;
+}
+
+/* ===========================
+   Grid Layouts
+=========================== */
+
+.info-grid,
+.card-grid,
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.info-card,
+.service-card,
+.product-card,
+.review-card,
+.contact-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.info-card:hover,
+.service-card:hover,
+.product-card:hover,
+.review-card:hover,
+.contact-card:hover{
+    transform:translateY(-8px);
+}
+
+.info-card h3,
+.service-card h3,
+.product-card h3,
+.contact-card h3{
+    color:#0B8F5A;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   Product Cards
+=========================== */
+
+.product-card a{
+    display:inline-block;
+    margin-top:20px;
+    background:#0B8F5A;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.product-card a:hover{
+    background:#086845;
+}
+
+/* ===========================
+   Reviews
+=========================== */
+
+.stars{
+    color:#FFD54F;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   Contact
+=========================== */
+
+.contact-card a{
+    color:#0B8F5A;
+    text-decoration:none;
+}
+
+.contact-card p{
+    margin-bottom:12px;
+}
+
+.map-card iframe{
+    width:100%;
+    height:320px;
+    border:none;
+    border-radius:15px;
+}
