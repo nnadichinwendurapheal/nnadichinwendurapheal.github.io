@@ -313,3 +313,37 @@ nav a{
 .buy-btn:hover{
     background:#1EBE5D;
 }
+/* ===== WHY CHOOSE US ===== */
+
+.why-us{
+    padding:80px 8%;
+    background:#16803C;
+    color:white;
+    text-align:center;
+}
+
+.why-us h2{
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.why-card{
+    background:rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.why-card:hover{
+    background:rgba(255,255,255,.2);
+}
+
+.why-card h3{
+    margin-bottom:15px;
+}
