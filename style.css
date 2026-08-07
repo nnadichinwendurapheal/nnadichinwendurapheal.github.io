@@ -347,3 +347,65 @@ nav a{
 .why-card h3{
     margin-bottom:15px;
 }
+/* ===== REVIEWS ===== */
+
+.reviews{
+    padding:80px 8%;
+    text-align:center;
+    background:#ffffff;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.review-card{
+    background:#f8fff9;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* ===== CONTACT ===== */
+
+.contact{
+    padding:80px 8%;
+    text-align:center;
+    background:#EAF8EE;
+}
+
+.contact h2{
+    color:#16803C;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+.whatsapp-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 30px;
+    background:#25D366;
+    color:white;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.whatsapp-btn:hover{
+    background:#1EBE5D;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:#16803C;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
