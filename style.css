@@ -262,3 +262,54 @@ nav a{
     padding:0 15px 20px;
     color:#555;
 }
+/* ===== FEATURED PRODUCTS ===== */
+
+.products{
+    padding:80px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.products h2{
+    color:#16803C;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.product-card{
+    background:#f8fff9;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.price{
+    color:#16803C;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.buy-btn{
+    display:inline-block;
+    background:#25D366;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.buy-btn:hover{
+    background:#1EBE5D;
+}
