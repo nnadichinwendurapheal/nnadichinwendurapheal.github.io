@@ -1,4 +1,4 @@
-/* ===== GENERAL ===== */
+no/* ===== GENERAL ===== */
 
 *{
     margin:0;
@@ -210,4 +210,55 @@ nav a{
 .box h3{
     color:#16803C;
     margin-bottom:15px;
+}
+/* ===== CATEGORIES ===== */
+
+.categories{
+    padding:80px 8%;
+    background:#f8fff9;
+    text-align:center;
+}
+
+.categories h2{
+    color:#16803C;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.categories p{
+    margin-bottom:40px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+}
+
+.category-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.category-card h3{
+    color:#16803C;
+    margin:20px 15px 10px;
+}
+
+.category-card p{
+    padding:0 15px 20px;
+    color:#555;
 }
