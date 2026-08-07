@@ -1,7 +1,7 @@
-/* ===========================
+/* =====================================
    SECUCC Health Care Pharmacy
-   Version 2.0 - Part 1
-=========================== */
+   style.css
+===================================== */
 
 *{
     margin:0;
@@ -9,18 +9,21 @@
     box-sizing:border-box;
 }
 
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8faf8;
+    color:#333;
+    line-height:1.6;
+}
+
 html{
     scroll-behavior:smooth;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f7faf8;
-    color:#333;
-    line-height:1.7;
+img{
+    max-width:100%;
+    display:block;
 }
-
-/* Container */
 
 .container{
     width:90%;
@@ -28,425 +31,214 @@ body{
     margin:auto;
 }
 
-/* Top Bar */
+/* ======================
+   Header
+====================== */
 
-.topbar{
-    background:#0B8F5A;
-    color:#fff;
-    font-size:14px;
-}
-
-.topbar-inner{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    padding:10px 0;
-    gap:10px;
-}
-
-/* Header */
-
-.header{
-    background:#fff;
-    position:sticky;
+header{
+    position:fixed;
     top:0;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
 
-.nav-wrap{
+.navbar{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 0;
+    padding:15px 0;
 }
 
-.brand{
-    text-decoration:none;
+.logo{
     display:flex;
     align-items:center;
-    gap:15px;
+    text-decoration:none;
+    gap:12px;
 }
-.logo{
-    width:70px;
-    height:70px;
+
+.logo img{
+    width:65px;
+    height:65px;
     object-fit:contain;
 }
 
-.brand-mark{
-    background:#0B8F5A;
-    color:#fff;
-    padding:10px 15px;
-    border-radius:10px;
-    font-weight:700;
-    font-size:20px;
-}
-
-.brand-text{
-    display:flex;
-    flex-direction:column;
-}
-
-.brand-text strong{
+.logo span{
     color:#0B8F5A;
-    font-size:20px;
+    font-size:22px;
+    font-weight:700;
 }
 
-.brand-text small{
-    color:#777;
-}
-
-/* Navigation */
-
-.nav{
+nav{
     display:flex;
     gap:25px;
 }
 
-.nav a{
+nav a{
     text-decoration:none;
     color:#333;
-    font-weight:500;
+    font-weight:600;
     transition:.3s;
 }
 
-.nav a:hover{
+nav a:hover{
     color:#0B8F5A;
 }
 
-/* Hero */
+/* ======================
+   Hero Slider
+====================== */
 
 .hero{
-    background:linear-gradient(135deg,#0B8F5A,#0e5c42);
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    margin-top:95px;
+}
+
+.slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
     color:#fff;
-    padding:90px 0;
+    background:rgba(0,0,0,.45);
+    padding:35px;
+    border-radius:15px;
+    z-index:2;
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:15px;
 }
 
-.hero-pill{
-    display:inline-block;
-    background:#ffffff20;
-    padding:8px 18px;
-    border-radius:50px;
+.hero-content p{
+    font-size:1.2rem;
     margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:56px;
-    margin-bottom:20px;
-    font-weight:800;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:30px;
-}
-
-/* Buttons */
-
-.hero-actions{
-    display:flex;
-    gap:20px;
-    margin-bottom:35px;
 }
 
 .btn{
-    text-decoration:none;
-    padding:15px 28px;
-    border-radius:50px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:#FFD54F;
-    color:#222;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-secondary{
-    background:#fff;
-    color:#0B8F5A;
-}
-
-.btn-secondary:hover{
-    transform:translateY(-3px);
-}
-
-/* Search */
-
-.search-box{
-    display:flex;
-    margin-top:20px;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.search-box input{
-    flex:1;
-    min-width:250px;
-    padding:15px;
-    border:none;
-    border-radius:40px;
-    font-size:16px;
-}
-
-.search-box button{
-    background:#FFD54F;
-    border:none;
-    padding:15px 30px;
-    border-radius:40px;
-    cursor:pointer;
-    font-weight:600;
-}
-
-/* Hero Cards */
-
-.hero-mini-cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin-top:40px;
-}
-
-.mini-card{
-    background:#ffffff18;
-    padding:18px;
-    border-radius:15px;
-    backdrop-filter:blur(8px);
-}
-
-.mini-card strong{
-    display:block;
-    margin-bottom:8px;
-}
-
-/* Right Hero Card */
-
-.hero-panel-card{
-    background:#fff;
-    color:#333;
-    border-radius:25px;
-    padding:35px;
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
-}
-
-.hero-panel-badge{
+    display:inline-block;
+    margin:8px;
+    padding:14px 28px;
     background:#0B8F5A;
     color:#fff;
-    padding:8px 15px;
-    border-radius:40px;
-    display:inline-block;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#087347;
+}/* ======================
+   Sections
+====================== */
+
+.section{
+    padding:80px 20px;
+}
+
+.section h2{
+    text-align:center;
+    color:#0B8F5A;
+    font-size:2.2rem;
     margin-bottom:20px;
 }
 
-.hero-panel-card h2{
-    color:#0B8F5A;
-    margin-bottom:15px;
-}
-
-.hero-stat-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-    margin-top:25px;
-}
-
-.hero-stat-grid div{
-    background:#f3f7f5;
-    padding:18px;
-    border-radius:12px;
+.section p{
     text-align:center;
+    max-width:800px;
+    margin:0 auto 30px;
 }
 
-.hero-stat-grid strong{
-    display:block;
-    color:#0B8F5A;
-    font-size:22px;
-}
-/* ===========================
-   Sections
-=========================== */
-
-.section{
-    padding:90px 0;
-}
-
-.section-light{
-    background:#ffffff;
-}
-
-.section-heading{
-    text-align:center;
-    max-width:750px;
-    margin:0 auto 60px;
-}
-
-.section-heading span{
-    color:#0B8F5A;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.section-heading h2{
-    font-size:42px;
-    margin:15px 0;
-    color:#1f2937;
-}
-
-.section-heading p{
-    color:#666;
-    font-size:17px;
-}
-
-/* ===========================
-   Grid Layouts
-=========================== */
-
-.info-grid,
-.card-grid,
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-/* ===========================
+/* ======================
    Cards
-=========================== */
+====================== */
 
-.info-card,
-.service-card,
-.product-card,
-.review-card,
-.contact-card{
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
     background:#fff;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.35s;
-}
-
-.info-card:hover,
-.service-card:hover,
-.product-card:hover,
-.review-card:hover,
-.contact-card:hover{
-    transform:translateY(-8px);
-}
-
-.info-card h3,
-.service-card h3,
-.product-card h3,
-.contact-card h3{
-    color:#0B8F5A;
-    margin-bottom:15px;
-}
-
-/* ===========================
-   Product Cards
-=========================== */
-
-.product-card a{
-    display:inline-block;
-    margin-top:20px;
-    background:#0B8F5A;
-    color:#fff;
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:30px;
-    font-weight:600;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
     transition:.3s;
 }
 
-.product-card a:hover{
-    background:#086845;
+.card:hover{
+    transform:translateY(-8px);
 }
 
-/* ===========================
-   Reviews
-=========================== */
-
-.stars{
-    color:#FFD54F;
-    font-size:22px;
+.card h3{
+    color:#0B8F5A;
     margin-bottom:15px;
 }
 
-/* ===========================
-   Contact
-=========================== */
-
-.contact-card a{
-    color:#0B8F5A;
+.card a{
+    display:inline-block;
+    margin-top:15px;
     text-decoration:none;
-}
-
-.contact-card p{
-    margin-bottom:12px;
-}
-
-.map-card iframe{
-    width:100%;
-    height:320px;
-    border:none;
-    border-radius:15px;
-}
-
-/* ===========================
-   Footer
-=========================== */
-
-.footer{
     background:#0B8F5A;
     color:#fff;
-    padding:60px 0 20px;
+    padding:10px 20px;
+    border-radius:6px;
 }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
+.card a:hover{
+    background:#087347;
 }
 
-.footer h3,
-.footer h4{
-    margin-bottom:15px;
-}
+/* ======================
+   Footer
+====================== */
 
-.footer p{
-    margin-bottom:10px;
-}
-
-.footer a{
+footer{
+    background:#0B8F5A;
     color:#fff;
-    text-decoration:none;
-}
-
-.footer a:hover{
-    text-decoration:underline;
-}
-
-.footer-bottom{
     text-align:center;
-    border-top:1px solid rgba(255,255,255,.2);
-    margin-top:30px;
-    padding-top:20px;
+    padding:25px;
 }
 
-/* ===========================
-   Floating WhatsApp Button
-=========================== */
+/* ======================
+   WhatsApp Button
+====================== */
 
 .whatsapp-float{
     position:fixed;
@@ -461,170 +253,46 @@ body{
     justify-content:center;
     align-items:center;
     text-decoration:none;
-    font-size:28px;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-    transition:.3s;
-    z-index:1000;
+    font-size:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
 }
 
-.whatsapp-float:hover{
-    transform:scale(1.1);
+/* ======================
+   Mobile
+====================== */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
 }
 
-/* ===========================
-   Scroll to Top Button
-=========================== */
-
-.scroll-top{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    width:50px;
-    height:50px;
-    border:none;
-    border-radius:50%;
-    background:#FFD54F;
-    color:#222;
-    font-size:22px;
-    cursor:pointer;
-    display:none;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-    z-index:999;
+nav{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:15px;
 }
 
-/* ===========================
-   Responsive Design
-=========================== */
-
-@media (max-width:900px){
-
-    .nav-wrap{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .nav{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero-mini-cards{
-        grid-template-columns:1fr;
-    }
-
-    .topbar-inner{
-        flex-direction:column;
-        text-align:center;
-    }
-}
-
-@media (max-width:600px){
-
-    .hero{
-        padding:70px 0;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .section-heading h2{
-        font-size:30px;
-    }
-
-    .hero-actions{
-        flex-direction:column;
-    }
-
-    .btn{
-        text-align:center;
-    }
-
-    .search-box{
-        flex-direction:column;
-    }
-
-    .search-box input,
-    .search-box button{
-        width:100%;
-    }
-}/* Hero Slider */
-
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
-}
-
-.slider{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-opacity:0;
-transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-opacity:1;
-}
-
-.slide img{
-width:100%;
-height:100%;
-object-fit:cover;
+.logo span{
+font-size:18px;
 }
 
 .hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:#fff;
-background:rgba(0,0,0,0.45);
-padding:30px;
-border-radius:15px;
-z-index:10;
+width:90%;
+padding:20px;
 }
 
 .hero-content h1{
-font-size:3rem;
-margin-bottom:15px;
+font-size:2rem;
 }
 
 .hero-content p{
-font-size:1.3rem;
-margin-bottom:25px;
+font-size:1rem;
 }
 
 .btn{
-display:inline-block;
-padding:12px 25px;
-margin:8px;
-background:#0B8F5A;
-color:#fff;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:.3s;
+display:block;
+margin:10px auto;
 }
 
-.btn:hover{
-background:#066b31;
 }
